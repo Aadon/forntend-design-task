@@ -1,114 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  </head>
-  </head>
-  <body>
-    <nav>
-     <div class="">
-       <a href="#">Check my postcodes</a>
-     </div>
-     <ul>
-       <li>
-         <a href="#">Home</a>
-       </li>
-       <li>
-         <a href="#">Lists</a>
-       </li>
-       <li>
-         <a href="#">Maps</a>
-       </li>
-       <li>
-         <a href="#">Nearest Postcodes</a>
-       </li>
-       <li>
-         <a href="#">Lottery</a>
-       </li>
-       <li>
-         <a href="#">FAQs</a>
-       </li>
-     </ul>
-    </nav>
-    <main>
-      <div class="search">
-        <input type="text" class="search" placeholder="Search for a postcode or place name">
-        <button>Search</button>
-        <p>Use your device's geolocation to find postcodes near you.</p>
+
+<head>
+  <title>Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+</head>
+
+<body>
+  <nav>
+    <div class="">
+      <a href="#">Check my postcodes</a>
+    </div>
+    <ul>
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">Lists</a>
+      </li>
+      <li>
+        <a href="#">Maps</a>
+      </li>
+      <li>
+        <a href="#">Nearest Postcodes</a>
+      </li>
+      <li>
+        <a href="#">Lottery</a>
+      </li>
+      <li>
+        <a href="#">FAQs</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <div class="wrapper">
+    <div class="search-bar">
+    <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" class="search" placeholder="Search for a postcode or place name">
+      <button>Search</button>
+    </div>
+    <p>Use your device's geolocation to find postcodes near you.</p>
+    </div>
+    <div class="hero">
+      <img src="images/house.png" alt="">
+      <div class="text">
+        <h1>Book your next stay with us</h1>
+        <p>Search low prices on hotels, homes and so much more with our exclusive deals and discounts! Whether you are
+          planning an adventurous gateway or a business trip, our exclusive deals ensure a memorable and affordable
+          travel experience. Take advantage of our curated exclusive deals and discounts, designed to cater to both your
+          budget and preferences. Whether you're seeking relaxation or productivity, our platform ensures that your
+          journey is not only memorable but also cost-effective. <span>Book now!</span></p>
       </div>
-      <div class="hero">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8N3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
-        <div class="text">
-          <h1>Book your next stay with us</h1>
-          <p>Search low prices on hotels, homes and so much more with our exclusive deals and discounts! Whether you are planning an adventurous gateway or a business trip, our exclusive deals ensure a memorable and affordable travel experience. Take advantage of our curated exclusive deals and discounts, designed to cater to both your budget and preferences. Whether you're seeking relaxation or productivity, our platform ensures that your journey is not only memorable but also cost-effective. <span>Book now!</span></p>
+    </div>
+    <section>
+      <h2>Popular Postcodes</h2>
+    <div class="postcodes">
+      <div class="list-header">
+        <p>Location</p>
+        <p>Postcode</p>
+        <p>
+          <i class="fa-solid fa-bars-filter"></i>
+          Filter
+        </p>
+      </div>
+      <div class="lists">
+        <div class="list-items">
+          <p>Birmingham </p>
+          <p class="p2">WA1 2WS</p>
+        </div>
+        <div class="list-items">
+          <p>Manchester</p>
+          <p class="p2">QWE FG3G</p>
+        </div>
+        <div class="list-items">
+          <p>Leeds</p>
+          <p class="p2">NJ8 189</p>
+        </div>
+        <div class="list-items">
+          <p>Bristol</p>
+          <p class="p2">KLM 7Y6</p>
+        </div>
+        <div class="list-items">
+          <p>Cornwell</p>
+          <p class="p2">SDR 7UT</p>
+        </div>
+        <div class="list-items">
+          <p>Bristol</p>
+          <p class="p2">KLM 7Y6</p>
         </div>
       </div>
-      <div class="postcodes">
-        <h2>Popular Postcodes</h2>
-        <div class="list-header">
-          <h3>Location</h3>
-          <h3>Postcode</h3>
-          <h3>
-            <i class="fas-solid fa-bars-filter"></i>
-            Filter
-          </h3>
-        </div>
-        <ul class="lists">
-          <li>
-            Birmingham <span>WA1 2WS</span>
-          </li>
-          <li>
-            Manchester <span>QWE FG3G</span>
-          </li>
-          <li>
-            Leeds <span>NJ8 189</span>
-          </li>
-          <li>
-            Bristol <span>KLM 7Y6</span>
-          </li>
-          <li>
-            Cornwell <span>SDR 7UT</span>
-          </li>
-          <li>
-            Bristol <span>KLM 7Y6</span>
-          </li>
-          <li>
-            <i class="fa-solid fa-less-than"></i>
-            <p>page 1 of 3</p>
-            <i class="fa-solid fa-greater-than"></i>
-          </li>
-        </ul>
+      <div class="pages">
+        <i class="fa-sharp fa-light fa-less-than"></i>
+        <p>page 1 of 3</p>
+      <i class="fa-sharp fa-light fa-greater-than"></i>
       </div>
-      <div class="map">
-        <div class="text">
-          <h3>Use check my postcode to find out key information about your local postcode</h3>
-          <p>Find out nearest postcode to where you are right now. Read what other people have said about your postcode anf leave your comments for others to read.</p>
-        </div>
-        <img src="" alt="">
+    </div>
+    </section>
+    <div class="map">
+      <div class="text">
+        <h4>Use check my postcode to find out key information about your local postcode</h4>
+        <p>Find out nearest postcode to where you are right now. Read what other people have said about your postcode and leave your comments for others to read.</p>
       </div>
-    </main>
-    <footer>
-      <ul class="search-list">
+      <img src="images/map.png" alt="">
+    </div>
+  </main>
+  <footer>
+    <div class="footer-container">
+    <ul class="search-list">
+        <h2>Search</h2>
         <li>Postcodes by county</li>
         <li>postcodes by introduction date</li>
         <li>postcodes near me</li>
         <li>postcodes by lottery</li>
-      </ul>
-      <ul class="map-list">
-        <li>Postcodes map by user type</li>
-        <li>postcodes map use category</li>
-        <li>postcodes map by council tax band</li>
-      </ul>
-      <ul class="legal-list">
-        <li>Privacy policy</li>
-        <li>Disclaimer and limitations</li>
-        <li>about this website</li>
-      </ul>
-      <p>checkmypostcode.uk is a <span>Goodstuff</span> website</p>
-    </footer>
-  </body>
+        </ul>
+        <ul class="map-list">
+          <h2>Map</h2>
+          <li>Postcodes map by user type</li>
+          <li>postcodes map use category</li>
+          <li>postcodes map by council tax band</li>
+        </ul>
+        <ul class="legal-list">
+          <h2>Legal</h2>
+          <li>Privacy policy</li>
+          <li>Disclaimer and limitations</li>
+          <li>about this website</li>
+        </ul>
+      </div>
+    <p>CheckMyPostcode.UK is a <span>Goodstuff</span> Website</p>
+  </footer>
+</body>
+
 </html>

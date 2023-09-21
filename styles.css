@@ -1,13 +1,19 @@
 * {
   margin: 0;
   padding: 0;
-
+  box-sizing: border-box;
 }
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  background-color: rgb(245, 247, 247);
+  background: #eff9f0;
+  color: #00040b;
+}
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
 }
 ul {
   list-style-type: none;
@@ -15,14 +21,15 @@ ul {
 a {
   text-decoration: none;
   text-transform: capitalize;
-  color: #003;
+  color: #00040b;
 }
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 60px;
-  background-color: #f0cd09;
+  font-weight: 400;
+  background-color: #f9c80e;
   padding: 0 40px;
 }
 nav ul {
@@ -30,38 +37,157 @@ nav ul {
   gap: 40px;
 }
 main {
-  max-width: 960px;
+  max-width: 1300px;
   padding: 40px;
+  
 }
-main .search {
+main .search-bar {
+  display: flex;
   width: 100%;
-  padding: ;
   margin: 20px 0;
+  position: relative;
+  border-radius: 10px;
 }
-main .search input {
-  display: inline;
-  width: 90%;
+.fa-magnifying-glass {
+  position: absolute;
+  top: 15px;
+  left: 60px;
+  font-weight: 100;
+  font-size: 28px;
+  cursor: pointer;
+}
+main .search-bar input {
+  width: 100%;
+  height: 60px;
   padding: 20px 0;
   border: none;
   box-shadow: 8px 0px 5px rgba(165, 61, 61, 0.2);
-  border-radius: 5px;
+  border-radius: 10px 0 0 10px;
 }
 ::placeholder {
-  padding: 60px;
+  padding: 0 120px;
   font-size: 16px;
 }
-main .search button {
-  padding: 16px 0;
-  background-color: #030d24;
+main .search-bar button {
+  width: 20%;
+  padding: 18px 0;
+  background-color: #011638;
   color: #fff;
-  margin-left: 0;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  font-size: 22px;
+  cursor: pointer;
 }
-main .search p {
+main .wrapper p {
+  display: block;
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
 }
 main .hero {
   display: flex;
+  align-items: center;
   gap: 16px;
-  margin: 20px 0;
+  padding-top: 20px 0;
+  width: 100%;
+  height: 740px;
+  font-size: 20px;
+}
+main .hero .text p {
+  line-height: 35px;
+}
+main .hero .text {
+  font-weight: 400;
+  font-size: 16px;
+}
+main .hero .text p span {
+  color: #011638;
+  font-weight: 600;
+  cursor: pointer;
+}
+.postcodes {
+  background: #fafdfa;
+  height: 400px;
+}
+section h2 {
+  margin-bottom: 5px;
+}
+.postcodes .list-header {
+  display: flex;
+  justify-content: space-between;
+  background: #f9c80e;
+  padding: 14px 34px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+.postcodes .lists .list-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  height: 34px;
+  padding: 10px 34px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.postcodes .lists .list-items:nth-child(odd) {
+  background: #fef4cf;
+  
+}
+.postcodes .lists .list-items .p2 {
+  text-align: center;
+}
+.postcodes .pages {
+  display: flex;
+  justify-content: space-between;
+  padding: 38px 34px;
+}
+.postcodes .pages {
+  font-size: 14px;
+}
+.fa-less-than,
+.fa-greater-than {
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+  background: #fff;
+  border: 1px solid #e7e5e5;
+  padding-left: 4px;
+  border-radius: 50%;
+}
+.map {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 700px;
+}
+.map .text {
+  font-size: 16px;
+  line-height: 35px;
+}
+footer {
+  background: #00040b;
+  color: #fff;
+  width: 100%;
+  height: 370px;
+
+}
+footer .footer-container {
+  display: flex;
+  gap: 60px;
+  padding: 40px 34px;
+  cursor: pointer;
+}
+footer ul li {
+text-transform: capitalize;
+font-size: 14px;
+line-height: 28px;
+}
+footer p {
+  text-align: center;
+  padding-top: 80px;
+
+}
+footer p span {
+  color: #F9C80E;
+  cursor: pointer;
 }
