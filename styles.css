@@ -4,8 +4,7 @@
   box-sizing: border-box;
 }
 :root {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   background: #eff9f0;
   color: #00040b;
@@ -21,25 +20,69 @@ ul {
 a {
   text-decoration: none;
   text-transform: capitalize;
-  color: #00040b;
+  color: #4e4e50;
+  font-weight: bold;
 }
-nav {
+nav .nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
-  font-weight: 400;
+  width: 100%;
+  font-weight: 500;
   background-color: #f9c80e;
-  padding: 0 40px;
+  padding: 20px 60px;
+  position: relative;
 }
-nav ul {
+nav .menu {
   display: flex;
-  gap: 40px;
+  justify-content: space-between;
+  gap: 20px;
+}
+nav .menu li {
+  padding-left: 30px;
+}
+nav .menu li a {
+  display: inline-block;
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+}
+nav .menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  transition: 0.15s ease-in-out;
+  background-color: #eff9f0;
+}
+nav .menu li a:hover:after {
+  width: 100%;
+}
+nav .open-menu,
+nav .menu .close-menu {
+  position: absolute;
+  cursor: pointer;
+  font-size: 34px;
+  display: none;
+  color: #fff;
+}
+nav .open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+nav .menu .close-menu {
+  top: 20px;
+  right: 20px;
+}
+#check {
+  display: none;
 }
 main {
-  max-width: 1300px;
+  max-width: 1200px;
   padding: 40px;
-  
 }
 main .search-bar {
   display: flex;
@@ -78,6 +121,9 @@ main .search-bar button {
   font-size: 22px;
   cursor: pointer;
 }
+main .wrapper {
+  padding: 40px 0;
+}
 main .wrapper p {
   display: block;
   text-align: center;
@@ -89,7 +135,7 @@ main .hero {
   gap: 16px;
   padding-top: 20px 0;
   width: 100%;
-  height: 740px;
+  height: 700px;
   font-size: 20px;
 }
 main .hero .text p {
@@ -98,6 +144,10 @@ main .hero .text p {
 main .hero .text {
   font-weight: 400;
   font-size: 16px;
+  width: 50%;
+}
+main .hero .text h1 {
+  padding: 8px 0;
 }
 main .hero .text p span {
   color: #011638;
@@ -106,10 +156,11 @@ main .hero .text p span {
 }
 .postcodes {
   background: #fafdfa;
-  height: 400px;
+  height: 500px;
 }
 section h2 {
-  margin-bottom: 5px;
+  padding: 20px 0;
+  font-weight: 400;
 }
 .postcodes .list-header {
   display: flex;
@@ -131,7 +182,6 @@ section h2 {
 }
 .postcodes .lists .list-items:nth-child(odd) {
   background: #fef4cf;
-  
 }
 .postcodes .lists .list-items .p2 {
   text-align: center;
@@ -163,13 +213,18 @@ section h2 {
 .map .text {
   font-size: 16px;
   line-height: 35px;
+  width: 50%;
+}
+.map .text h3 {
+  padding: 16px 0;
+  font-size: 22px;
+  font-weight: bold;
 }
 footer {
   background: #00040b;
   color: #fff;
   width: 100%;
-  height: 370px;
-
+  height: 260px;
 }
 footer .footer-container {
   display: flex;
@@ -178,16 +233,170 @@ footer .footer-container {
   cursor: pointer;
 }
 footer ul li {
-text-transform: capitalize;
-font-size: 14px;
-line-height: 28px;
+  text-transform: capitalize;
+  font-size: 14px;
+  line-height: 28px;
 }
 footer p {
   text-align: center;
-  padding-top: 80px;
-
 }
 footer p span {
-  color: #F9C80E;
+  color: #f9c80e;
   cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  nav .nav-bar {
+    width: 480px;
+  }
+  nav .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background: #010a1b;
+  }
+  nav .menu li {
+    margin: 20px 0;
+  }
+  nav .menu li a {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px;
+    text-transform: uppercase;
+  }
+  nav .open-menu,
+  nav .menu .close-menu {
+    display: block;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+  main {
+    width: 100%;
+  }
+  main .wrapper {
+    width: 100%;
+    height: 200px;
+  }
+  .fa-magnifying-glass {
+    position: absolute;
+    top: 15px;
+    left: 26px;
+  }
+  ::placeholder {
+    padding: 0 60px;
+    font-size: 18px;
+  }
+  main .search-bar button {
+    width: 30%;
+  }
+  main .wrapper p {
+    font-size: 18px;
+  }
+  main .hero {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 980px;
+  }
+  main .hero .text {
+    max-height: 400px;
+    width: 100%;
+  }
+  main .hero .text p {
+    font-size: 22px;
+  }
+  .house,
+  .map-img {
+    width: 100%;
+  }
+  section {
+    height: 500px;
+  }
+  .map {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .map .text {
+    font-size: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  img {
+    width: 100%;
+  }
+  footer {
+    width: 480px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav .nav-bar {
+    width: 768px;
+  }
+  nav .menu li {
+    padding: 0 16px;
+  }
+  main {
+    width: 768px;
+  }
+  main .hero {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .house,
+  .map-img {
+    width: 100%;
+  }
+  img {
+    width: 100%;
+  }
+  main .hero .text {
+    font-weight: 400;
+    width: 100%;
+    font-size: 22px;
+    padding: 30px 0;
+  }
+  .map {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    font-size: 22px;
+    padding: 30px 0;
+    width: 100%;
+  }
+  .map .text {
+    width: 100%;
+  }
+  footer {
+    width: 768px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  nav .nav-bar {
+    width: 1024px;
+  }
+  main {
+    width: 1024px;
+  }
+  main .hero {
+    width: 100%;
+  }
+  .house, .map-img {
+    width: 80%;
+  }
+  footer {
+    width: 1024px;
+  }
 }

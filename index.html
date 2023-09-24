@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Home</title>
+  <title></title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" href="styles.css" />
@@ -10,33 +10,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 </head>
-
 <body>
-  <nav>
-    <div class="">
-      <a href="#">Check my postcodes</a>
-    </div>
-    <ul>
-      <li>
-        <a href="#">Home</a>
-      </li>
-      <li>
-        <a href="#">Lists</a>
-      </li>
-      <li>
-        <a href="#">Maps</a>
-      </li>
-      <li>
-        <a href="#">Nearest Postcodes</a>
-      </li>
-      <li>
-        <a href="#">Lottery</a>
-      </li>
-      <li>
-        <a href="#">FAQs</a>
-      </li>
-    </ul>
-  </nav>
+  <header>
+    <nav>
+      <ul class="nav-bar">
+        <li>
+          <a href="#">Check my postcodes</a>
+        </li>
+        <input type="checkbox" id="check">
+        <span class="menu">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Lists</a>
+          </li>
+          <li>
+            <a href="#">Maps</a>
+          </li>
+          <li>
+            <a href="#">Nearest Postcodes</a>
+          </li>
+          <li>
+            <a href="#">Lottery</a>
+          </li>
+          <li>
+            <a href="#">FAQs</a>
+          </li>
+          <label for="check" class="close-menu">
+            <i class="fa-solid fa-xmark"></i>
+          </label>
+        </span>
+        <label for="check" class="open-menu">
+          <i class="fa-solid fa-light fa-bars"></i>
+        </label>
+      </ul>
+    </nav>
+  </header>
   <main>
     <div class="wrapper">
     <div class="search-bar">
@@ -47,7 +57,9 @@
     <p>Use your device's geolocation to find postcodes near you.</p>
     </div>
     <div class="hero">
-      <img src="images/house.png" alt="">
+      <div class="house">
+        <img src="images/house.png" alt="">
+      </div>
       <div class="text">
         <h1>Book your next stay with us</h1>
         <p>Search low prices on hotels, homes and so much more with our exclusive deals and discounts! Whether you are
@@ -103,10 +115,12 @@
     </section>
     <div class="map">
       <div class="text">
-        <h4>Use check my postcode to find out key information about your local postcode</h4>
+        <h3>Use check my postcode to find out key information about your local postcode</h3>
         <p>Find out nearest postcode to where you are right now. Read what other people have said about your postcode and leave your comments for others to read.</p>
       </div>
-      <img src="images/map.png" alt="">
+      <div class="map-img">
+        <img src="images/map.png" alt="">
+      </div>
     </div>
   </main>
   <footer>
